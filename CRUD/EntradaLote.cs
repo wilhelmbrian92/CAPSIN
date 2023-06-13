@@ -51,14 +51,14 @@ namespace CRUD
             if ((cboxProductos.Text == "") || (txtCantidad.ToString() == "")) MessageBox.Show("Debe completar todos los campos");
             else
             {
-                MessageBox.Show(fechaEntrada.ToString() + proveedor + idProducto);
+                
                 //inserta registro en tabla Lote
                 int cantidad = Convert.ToInt32(txtCantidad.Text);
                 DateTime fechaVencimiento = dtpVencimiento.Value.Date;
 
                 if (logica.InsertarLote(idProducto, cantidad, fechaVencimiento, out int idLote))
                 {
-                    MessageBox.Show("Los registros se han insertado correctamente en la tabla Lote." + "ID del lote insertado: " + idLote);
+                    MessageBox.Show("Los registros se han insertado correctamente en la tabla Lote." );
                     loteID = idLote;
                 }
                 else
@@ -78,7 +78,8 @@ namespace CRUD
 
 
             }
-
+            txtCantidad.Text = "";
+            cboxProductos.Text = "";
 
         }
 

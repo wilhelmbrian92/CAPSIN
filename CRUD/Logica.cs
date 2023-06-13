@@ -54,6 +54,11 @@ namespace CRUD
             return conexionDb.ObtenerVistaProductoLoteEntradas();
         }
 
+        public DataTable ObtenerRegistrosPorFechaVencimiento(DateTime fechaVencimiento)
+        {
+            return conexionDb.ObtenerRegistrosPorFechaVencimiento(fechaVencimiento);
+        }
+
         public DateTime[] ObtenerFechasVencimientoResaltadas()
         {
             List<DateTime> fechasResaltadas = new List<DateTime>();

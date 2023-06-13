@@ -37,10 +37,12 @@
             // 
             this.calendarioVencimientos.BackColor = System.Drawing.SystemColors.Window;
             this.calendarioVencimientos.CalendarDimensions = new System.Drawing.Size(2, 2);
+            this.calendarioVencimientos.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.calendarioVencimientos.Location = new System.Drawing.Point(18, 85);
             this.calendarioVencimientos.MinDate = new System.DateTime(2023, 1, 1, 0, 0, 0, 0);
             this.calendarioVencimientos.Name = "calendarioVencimientos";
             this.calendarioVencimientos.TabIndex = 0;
+            this.calendarioVencimientos.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.calendarioVencimientos_DateSelected);
             // 
             // linkLabel1
             // 

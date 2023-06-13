@@ -65,6 +65,12 @@
       <DependentUpon>Consulta.cs</DependentUpon>
     </Compile>
     <Compile Include="Datos.cs" />
+    <Compile Include="detalleVencimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="detalleVencimiento.Designer.cs">
+      <DependentUpon>detalleVencimiento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Logica.cs" />
     <Compile Include="Presentacion.cs">
       <SubType>Form</SubType>
@@ -88,6 +94,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Consulta.resx">
       <DependentUpon>Consulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="detalleVencimiento.resx">
+      <DependentUpon>detalleVencimiento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion.resx">
       <DependentUpon>Presentacion.cs</DependentUpon>

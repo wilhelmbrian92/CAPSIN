@@ -43,10 +43,10 @@
             this.linkLblAlta.Location = new System.Drawing.Point(58, 69);
             this.linkLblAlta.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.linkLblAlta.Name = "linkLblAlta";
-            this.linkLblAlta.Size = new System.Drawing.Size(174, 24);
+            this.linkLblAlta.Size = new System.Drawing.Size(224, 24);
             this.linkLblAlta.TabIndex = 0;
             this.linkLblAlta.TabStop = true;
-            this.linkLblAlta.Text = "Ingresar producto";
+            this.linkLblAlta.Text = "Alta de nuevo producto";
             this.linkLblAlta.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLblAlta_LinkClicked);
             // 
             // linkLblConsulta
@@ -88,17 +88,16 @@
             this.linkLblEntradas.Location = new System.Drawing.Point(58, 146);
             this.linkLblEntradas.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.linkLblEntradas.Name = "linkLblEntradas";
-            this.linkLblEntradas.Size = new System.Drawing.Size(175, 24);
+            this.linkLblEntradas.Size = new System.Drawing.Size(287, 24);
             this.linkLblEntradas.TabIndex = 3;
             this.linkLblEntradas.TabStop = true;
-            this.linkLblEntradas.Text = "Ingresar registros";
+            this.linkLblEntradas.Text = "Registrar ingreso de producto";
             this.linkLblEntradas.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLblEntradas_LinkClicked);
             // 
             // Presentacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(723, 519);
             this.Controls.Add(this.linkLblEntradas);
@@ -112,8 +111,7 @@
             this.MaximizeBox = false;
             this.Name = "Presentacion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CRUD";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Text = "Inicio CAPSIN";
             this.ResumeLayout(false);
             this.PerformLayout();
 

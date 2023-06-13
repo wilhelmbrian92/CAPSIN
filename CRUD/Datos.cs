@@ -183,7 +183,7 @@ namespace CRUD
                 {
                     connection.Open();
 
-                    string query = "SELECT * FROM VistaProductoLoteEntradas";
+                    string query = "SELECT * FROM VistaProductosLoteEntradasID";
 
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
@@ -201,6 +201,28 @@ namespace CRUD
             }
 
             return dataTable;
+        }
+
+        public DataTable ObtenerRegistrosPorFechaVencimiento(DateTime fechaVencimiento)
+        {
+            DataTable dtRegistros = new DataTable();
+
+            using (SqlConnection connection = new SqlConnection(s))
+            {
+                connection.Open();
+
+                string query = "SELECT * FROM VistaProductosLoteEntradasID WHERE FechaVencimiento = @FechaVencimiento";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@FechaVencimiento", fechaVencimiento);
+
+                    SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+                    dataAdapter.Fill(dtRegistros);
+                }
+            }
+
+            return dtRegistros;
         }
 
         public DateTime[] ObtenerFechasVencimiento()

@@ -17,16 +17,19 @@ namespace CRUD
         public Calendario()
         {
             InitializeComponent();
+           
         }
 
         private void Calendario_Load(object sender, EventArgs e)
         {
             CargarFechasResaltadas();
             
+
         }
 
         private void CargarFechasResaltadas()
         {
+           
             Datos datos = new Datos();
             DateTime[] fechasResaltadas = datos.ObtenerFechasVencimiento();
 
@@ -39,6 +42,16 @@ namespace CRUD
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Close();
+        }
+
+        private void calendarioVencimientos_DateSelected(object sender, DateRangeEventArgs e)
+        {
+
+            string fechaSeleccionada = calendarioVencimientos.SelectionRange.Start.Date.ToShortDateString();
+            DateTime fechaSeleccionada2 = Convert.ToDateTime(fechaSeleccionada);
+            detalleVencimiento frmDetalles = new detalleVencimiento(fechaSeleccionada2);
+            frmDetalles.ShowDialog();
+            
         }
     }
 }
