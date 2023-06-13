@@ -24,13 +24,16 @@ namespace CRUD
         {
             InitializeComponent();
             CargarNombresProductos();
+            btnAceptar.FlatStyle = FlatStyle.Flat;
+            btnAceptar.BackColor = Color.FromArgb(45, 45, 45);
+            btnAceptar.ForeColor = Color.Silver;
 
         }
 
         private void Registrar_ENTRADA_Load(object sender, EventArgs e)
         {
             rbtnSecretaria.Checked = true;
-            btnAceptar.ForeColor = Color.Black;
+      
         }
 
 

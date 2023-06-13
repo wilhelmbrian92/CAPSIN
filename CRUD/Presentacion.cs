@@ -13,10 +13,10 @@ namespace CRUD
     public partial class Presentacion : Form
     {
 
-        
         public Presentacion()
         {
             InitializeComponent();
+            
         }
         //creamos variable de formulario para cargar form en panel
         private Form activefrm = null;
@@ -51,6 +51,11 @@ namespace CRUD
         private void btnCalendario_Click(object sender, EventArgs e)
         {
             abrirPanelFrm(new Calendario());
+        }
+
+        private void Presentacion_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

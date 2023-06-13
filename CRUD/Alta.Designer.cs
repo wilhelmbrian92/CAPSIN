@@ -60,6 +60,7 @@
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Silver;
             this.button1.Location = new System.Drawing.Point(0, 525);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(563, 36);
@@ -74,10 +75,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNombre.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(81, 21);
+            this.txtNombre.Location = new System.Drawing.Point(64, 28);
             this.txtNombre.MaxLength = 256;
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(431, 26);
+            this.txtNombre.Size = new System.Drawing.Size(487, 26);
             this.txtNombre.TabIndex = 2;
             // 
             // txtTipo
@@ -86,10 +87,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTipo.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTipo.Location = new System.Drawing.Point(81, 20);
+            this.txtTipo.Location = new System.Drawing.Point(64, 8);
             this.txtTipo.MaxLength = 256;
             this.txtTipo.Name = "txtTipo";
-            this.txtTipo.Size = new System.Drawing.Size(431, 26);
+            this.txtTipo.Size = new System.Drawing.Size(487, 26);
             this.txtTipo.TabIndex = 3;
             // 
             // lblNombre
@@ -97,7 +98,7 @@
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lblNombre.Location = new System.Drawing.Point(17, 21);
+            this.lblNombre.Location = new System.Drawing.Point(3, 28);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(55, 15);
             this.lblNombre.TabIndex = 4;
@@ -108,7 +109,7 @@
             this.lblTipo.AutoSize = true;
             this.lblTipo.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTipo.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lblTipo.Location = new System.Drawing.Point(43, 20);
+            this.lblTipo.Location = new System.Drawing.Point(24, 8);
             this.lblTipo.Name = "lblTipo";
             this.lblTipo.Size = new System.Drawing.Size(34, 15);
             this.lblTipo.TabIndex = 5;
@@ -118,10 +119,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(331, 16);
             this.label1.TabIndex = 6;
@@ -129,12 +129,13 @@
             // 
             // panelInput
             // 
+            this.panelInput.Controls.Add(this.label1);
             this.panelInput.Controls.Add(this.txtNombre);
             this.panelInput.Controls.Add(this.lblNombre);
             this.panelInput.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelInput.Location = new System.Drawing.Point(0, 16);
+            this.panelInput.Location = new System.Drawing.Point(0, 0);
             this.panelInput.Name = "panelInput";
-            this.panelInput.Size = new System.Drawing.Size(563, 65);
+            this.panelInput.Size = new System.Drawing.Size(563, 60);
             this.panelInput.TabIndex = 7;
             // 
             // panel2
@@ -142,9 +143,9 @@
             this.panel2.Controls.Add(this.lblTipo);
             this.panel2.Controls.Add(this.txtTipo);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 81);
+            this.panel2.Location = new System.Drawing.Point(0, 60);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(563, 65);
+            this.panel2.Size = new System.Drawing.Size(563, 40);
             this.panel2.TabIndex = 8;
             // 
             // Alta
@@ -155,7 +156,6 @@
             this.ClientSize = new System.Drawing.Size(563, 561);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panelInput);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.linkLabel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

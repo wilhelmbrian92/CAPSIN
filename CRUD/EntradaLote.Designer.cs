@@ -69,14 +69,17 @@
             // 
             // btnAceptar
             // 
+            this.btnAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.btnAceptar.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnAceptar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAceptar.Location = new System.Drawing.Point(0, 528);
+            this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAceptar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAceptar.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.btnAceptar.Location = new System.Drawing.Point(0, 525);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(563, 33);
+            this.btnAceptar.Size = new System.Drawing.Size(563, 36);
             this.btnAceptar.TabIndex = 3;
             this.btnAceptar.Text = "Aceptar";
-            this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.UseVisualStyleBackColor = false;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // lblCantidad
@@ -124,11 +127,11 @@
             // rbtnRemediar
             // 
             this.rbtnRemediar.AutoSize = true;
-            this.rbtnRemediar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnRemediar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnRemediar.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.rbtnRemediar.Location = new System.Drawing.Point(3, 53);
             this.rbtnRemediar.Name = "rbtnRemediar";
-            this.rbtnRemediar.Size = new System.Drawing.Size(95, 22);
+            this.rbtnRemediar.Size = new System.Drawing.Size(88, 20);
             this.rbtnRemediar.TabIndex = 5;
             this.rbtnRemediar.TabStop = true;
             this.rbtnRemediar.Text = "Remediar";
@@ -138,11 +141,11 @@
             // rbtnSecretaria
             // 
             this.rbtnSecretaria.AutoSize = true;
-            this.rbtnSecretaria.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnSecretaria.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnSecretaria.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.rbtnSecretaria.Location = new System.Drawing.Point(6, 25);
             this.rbtnSecretaria.Name = "rbtnSecretaria";
-            this.rbtnSecretaria.Size = new System.Drawing.Size(98, 22);
+            this.rbtnSecretaria.Size = new System.Drawing.Size(92, 20);
             this.rbtnSecretaria.TabIndex = 4;
             this.rbtnSecretaria.TabStop = true;
             this.rbtnSecretaria.Text = "Secretaría";
@@ -152,11 +155,11 @@
             // lblProveedor
             // 
             this.lblProveedor.AutoSize = true;
-            this.lblProveedor.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProveedor.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProveedor.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.lblProveedor.Location = new System.Drawing.Point(3, 4);
             this.lblProveedor.Name = "lblProveedor";
-            this.lblProveedor.Size = new System.Drawing.Size(89, 18);
+            this.lblProveedor.Size = new System.Drawing.Size(82, 16);
             this.lblProveedor.TabIndex = 1;
             this.lblProveedor.Text = "Proveedor: ";
             this.lblProveedor.Click += new System.EventHandler(this.lblProveedor_Click);
@@ -169,7 +172,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.panel1.Location = new System.Drawing.Point(0, 447);
+            this.panel1.Location = new System.Drawing.Point(0, 444);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(563, 81);
             this.panel1.TabIndex = 13;
@@ -201,6 +204,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnAceptar);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.Name = "Registrar_ENTRADA";

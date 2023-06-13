@@ -41,7 +41,7 @@
             // panelSideMenu
             // 
             this.panelSideMenu.AutoScroll = true;
-            this.panelSideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.panelSideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(40)))));
             this.panelSideMenu.Controls.Add(this.btnCalendario);
             this.panelSideMenu.Controls.Add(this.btnConsulta);
             this.panelSideMenu.Controls.Add(this.btnEntrada);
@@ -127,6 +127,7 @@
             // 
             // panelLogo
             // 
+            this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(40)))));
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
@@ -136,7 +137,7 @@
             // 
             // panelFrm
             // 
-            this.panelFrm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.panelFrm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.panelFrm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelFrm.Location = new System.Drawing.Point(221, 0);
             this.panelFrm.Name = "panelFrm";
@@ -152,12 +153,13 @@
             this.Controls.Add(this.panelFrm);
             this.Controls.Add(this.panelSideMenu);
             this.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.ForeColor = System.Drawing.Color.Black;
             this.Margin = new System.Windows.Forms.Padding(6);
             this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "Presentacion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio CAPSIN";
+            this.Load += new System.EventHandler(this.Presentacion_Load);
             this.panelSideMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
