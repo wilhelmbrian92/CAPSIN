@@ -12,36 +12,45 @@ namespace CRUD
 {
     public partial class Presentacion : Form
     {
+
+        
         public Presentacion()
         {
             InitializeComponent();
         }
-
-        private void linkLblAlta_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            Alta frmAlta = new Alta();
-            frmAlta.ShowDialog();
-            
-
+        //creamos variable de formulario para cargar form en panel
+        private Form activefrm = null;
+       private void abrirPanelFrm(Form frmHijo) {
+            if (activefrm != null) activefrm.Close();
+            activefrm = frmHijo;
+            frmHijo.TopLevel = false;
+            frmHijo.FormBorderStyle = FormBorderStyle.None;
+            frmHijo.Dock = DockStyle.Fill;
+            panelFrm.Controls.Add(frmHijo);
+            panelFrm.Tag = frmHijo;
+            panelFrm.BringToFront();
+            frmHijo.Show();
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+      
+        private void btnAlta_Click(object sender, EventArgs e)
         {
-            Consulta frmConsulta = new Consulta();
-            frmConsulta.ShowDialog();
-
+            abrirPanelFrm(new Alta());
         }
 
-        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void btnEntrada_Click(object sender, EventArgs e)
         {
-            Calendario frmCalendario = new Calendario();
-            frmCalendario.ShowDialog();
+            abrirPanelFrm(new Registrar_ENTRADA());
         }
 
-        private void linkLblEntradas_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void btnConsulta_Click(object sender, EventArgs e)
         {
-            Registrar_ENTRADA frmEntradaLote = new Registrar_ENTRADA();
-            frmEntradaLote.ShowDialog();
+            abrirPanelFrm(new Consulta());
+        }
+
+        private void btnCalendario_Click(object sender, EventArgs e)
+        {
+            abrirPanelFrm(new Calendario());
         }
     }
 }

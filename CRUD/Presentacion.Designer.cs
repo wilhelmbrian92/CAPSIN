@@ -28,101 +28,148 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.linkLblAlta = new System.Windows.Forms.LinkLabel();
-            this.linkLblConsulta = new System.Windows.Forms.LinkLabel();
-            this.linkLblCalendario = new System.Windows.Forms.LinkLabel();
-            this.linkLblEntradas = new System.Windows.Forms.LinkLabel();
+            this.panelSideMenu = new System.Windows.Forms.Panel();
+            this.panelLogo = new System.Windows.Forms.Panel();
+            this.btnAlta = new System.Windows.Forms.Button();
+            this.btnEntrada = new System.Windows.Forms.Button();
+            this.btnConsulta = new System.Windows.Forms.Button();
+            this.btnCalendario = new System.Windows.Forms.Button();
+            this.panelFrm = new System.Windows.Forms.Panel();
+            this.panelSideMenu.SuspendLayout();
             this.SuspendLayout();
             // 
-            // linkLblAlta
+            // panelSideMenu
             // 
-            this.linkLblAlta.ActiveLinkColor = System.Drawing.Color.DarkViolet;
-            this.linkLblAlta.AutoSize = true;
-            this.linkLblAlta.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLblAlta.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.linkLblAlta.Location = new System.Drawing.Point(58, 69);
-            this.linkLblAlta.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.linkLblAlta.Name = "linkLblAlta";
-            this.linkLblAlta.Size = new System.Drawing.Size(224, 24);
-            this.linkLblAlta.TabIndex = 0;
-            this.linkLblAlta.TabStop = true;
-            this.linkLblAlta.Text = "Alta de nuevo producto";
-            this.linkLblAlta.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLblAlta_LinkClicked);
+            this.panelSideMenu.AutoScroll = true;
+            this.panelSideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.panelSideMenu.Controls.Add(this.btnCalendario);
+            this.panelSideMenu.Controls.Add(this.btnConsulta);
+            this.panelSideMenu.Controls.Add(this.btnEntrada);
+            this.panelSideMenu.Controls.Add(this.btnAlta);
+            this.panelSideMenu.Controls.Add(this.panelLogo);
+            this.panelSideMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelSideMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelSideMenu.Name = "panelSideMenu";
+            this.panelSideMenu.Size = new System.Drawing.Size(250, 561);
+            this.panelSideMenu.TabIndex = 4;
             // 
-            // linkLblConsulta
+            // panelLogo
             // 
-            this.linkLblConsulta.ActiveLinkColor = System.Drawing.Color.DarkViolet;
-            this.linkLblConsulta.AutoSize = true;
-            this.linkLblConsulta.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLblConsulta.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.linkLblConsulta.Location = new System.Drawing.Point(58, 227);
-            this.linkLblConsulta.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.linkLblConsulta.Name = "linkLblConsulta";
-            this.linkLblConsulta.Size = new System.Drawing.Size(187, 24);
-            this.linkLblConsulta.TabIndex = 1;
-            this.linkLblConsulta.TabStop = true;
-            this.linkLblConsulta.Text = "Consultar registros";
-            this.linkLblConsulta.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(250, 100);
+            this.panelLogo.TabIndex = 0;
             // 
-            // linkLblCalendario
+            // btnAlta
             // 
-            this.linkLblCalendario.ActiveLinkColor = System.Drawing.Color.DarkViolet;
-            this.linkLblCalendario.AutoSize = true;
-            this.linkLblCalendario.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLblCalendario.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.linkLblCalendario.Location = new System.Drawing.Point(58, 307);
-            this.linkLblCalendario.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.linkLblCalendario.Name = "linkLblCalendario";
-            this.linkLblCalendario.Size = new System.Drawing.Size(269, 24);
-            this.linkLblCalendario.TabIndex = 2;
-            this.linkLblCalendario.TabStop = true;
-            this.linkLblCalendario.Text = "Calendario de vencimientos";
-            this.linkLblCalendario.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            this.btnAlta.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAlta.FlatAppearance.BorderSize = 0;
+            this.btnAlta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnAlta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAlta.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlta.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.btnAlta.Location = new System.Drawing.Point(0, 100);
+            this.btnAlta.Name = "btnAlta";
+            this.btnAlta.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnAlta.Size = new System.Drawing.Size(250, 45);
+            this.btnAlta.TabIndex = 1;
+            this.btnAlta.Text = "Alta de nuevo producto";
+            this.btnAlta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAlta.UseVisualStyleBackColor = true;
+            this.btnAlta.Click += new System.EventHandler(this.btnAlta_Click);
             // 
-            // linkLblEntradas
+            // btnEntrada
             // 
-            this.linkLblEntradas.ActiveLinkColor = System.Drawing.Color.DarkViolet;
-            this.linkLblEntradas.AutoSize = true;
-            this.linkLblEntradas.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLblEntradas.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.linkLblEntradas.Location = new System.Drawing.Point(58, 146);
-            this.linkLblEntradas.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.linkLblEntradas.Name = "linkLblEntradas";
-            this.linkLblEntradas.Size = new System.Drawing.Size(287, 24);
-            this.linkLblEntradas.TabIndex = 3;
-            this.linkLblEntradas.TabStop = true;
-            this.linkLblEntradas.Text = "Registrar ingreso de producto";
-            this.linkLblEntradas.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLblEntradas_LinkClicked);
+            this.btnEntrada.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEntrada.FlatAppearance.BorderSize = 0;
+            this.btnEntrada.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnEntrada.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEntrada.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEntrada.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.btnEntrada.Location = new System.Drawing.Point(0, 145);
+            this.btnEntrada.Name = "btnEntrada";
+            this.btnEntrada.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnEntrada.Size = new System.Drawing.Size(250, 45);
+            this.btnEntrada.TabIndex = 2;
+            this.btnEntrada.Text = "Ingreso de lote";
+            this.btnEntrada.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEntrada.UseVisualStyleBackColor = true;
+            this.btnEntrada.Click += new System.EventHandler(this.btnEntrada_Click);
+            // 
+            // btnConsulta
+            // 
+            this.btnConsulta.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnConsulta.FlatAppearance.BorderSize = 0;
+            this.btnConsulta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnConsulta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsulta.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsulta.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.btnConsulta.Location = new System.Drawing.Point(0, 190);
+            this.btnConsulta.Name = "btnConsulta";
+            this.btnConsulta.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnConsulta.Size = new System.Drawing.Size(250, 45);
+            this.btnConsulta.TabIndex = 3;
+            this.btnConsulta.Text = "Consultar registro";
+            this.btnConsulta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConsulta.UseVisualStyleBackColor = true;
+            this.btnConsulta.Click += new System.EventHandler(this.btnConsulta_Click);
+            // 
+            // btnCalendario
+            // 
+            this.btnCalendario.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCalendario.FlatAppearance.BorderSize = 0;
+            this.btnCalendario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnCalendario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCalendario.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCalendario.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.btnCalendario.Location = new System.Drawing.Point(0, 235);
+            this.btnCalendario.Name = "btnCalendario";
+            this.btnCalendario.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnCalendario.Size = new System.Drawing.Size(250, 45);
+            this.btnCalendario.TabIndex = 4;
+            this.btnCalendario.Text = "Calendario de vencimientos";
+            this.btnCalendario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCalendario.UseVisualStyleBackColor = true;
+            this.btnCalendario.Click += new System.EventHandler(this.btnCalendario_Click);
+            // 
+            // panelFrm
+            // 
+            this.panelFrm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.panelFrm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelFrm.Location = new System.Drawing.Point(250, 0);
+            this.panelFrm.Name = "panelFrm";
+            this.panelFrm.Size = new System.Drawing.Size(684, 561);
+            this.panelFrm.TabIndex = 5;
             // 
             // Presentacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.ClientSize = new System.Drawing.Size(723, 519);
-            this.Controls.Add(this.linkLblEntradas);
-            this.Controls.Add(this.linkLblCalendario);
-            this.Controls.Add(this.linkLblConsulta);
-            this.Controls.Add(this.linkLblAlta);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.ClientSize = new System.Drawing.Size(934, 561);
+            this.Controls.Add(this.panelFrm);
+            this.Controls.Add(this.panelSideMenu);
             this.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(6);
-            this.MaximizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(950, 600);
             this.Name = "Presentacion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio CAPSIN";
+            this.panelSideMenu.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.LinkLabel linkLblAlta;
-        private System.Windows.Forms.LinkLabel linkLblConsulta;
-        private System.Windows.Forms.LinkLabel linkLblCalendario;
-        private System.Windows.Forms.LinkLabel linkLblEntradas;
+        private System.Windows.Forms.Panel panelSideMenu;
+        private System.Windows.Forms.Button btnCalendario;
+        private System.Windows.Forms.Button btnConsulta;
+        private System.Windows.Forms.Button btnEntrada;
+        private System.Windows.Forms.Button btnAlta;
+        private System.Windows.Forms.Panel panelLogo;
+        private System.Windows.Forms.Panel panelFrm;
     }
 }
 
