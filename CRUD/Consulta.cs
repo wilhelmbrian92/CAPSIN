@@ -32,7 +32,11 @@ namespace CRUD
         {
             CargarDatos();
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-           
+            dataGridView1.DefaultCellStyle.Font = new Font("Arial", 8);
+            dataGridView1.ForeColor = Color.Black;
+            btnBuscar.ForeColor = Color.Black;
+
+
         }
 
         private void CargarDatos()

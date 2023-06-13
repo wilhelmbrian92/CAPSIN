@@ -40,17 +40,18 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 58);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(692, 380);
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.Size = new System.Drawing.Size(598, 364);
             this.dataGridView1.TabIndex = 0;
             // 
             // lbl1
             // 
             this.lbl1.AutoSize = true;
-            this.lbl1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl1.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.lbl1.Location = new System.Drawing.Point(13, 13);
             this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(186, 18);
+            this.lbl1.Size = new System.Drawing.Size(172, 16);
             this.lbl1.TabIndex = 1;
             this.lbl1.Text = "Vencimientos de la fecha:";
             // 
@@ -59,7 +60,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.ClientSize = new System.Drawing.Size(716, 450);
+            this.ClientSize = new System.Drawing.Size(625, 433);
             this.Controls.Add(this.lbl1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "detalleVencimiento";

@@ -35,6 +35,10 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblTipo = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.panelInput = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panelInput.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // linkLabel1
@@ -55,10 +59,10 @@
             this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(0, 486);
+            this.button1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(0, 525);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(668, 36);
+            this.button1.Size = new System.Drawing.Size(563, 36);
             this.button1.TabIndex = 1;
             this.button1.Text = "Aceptar";
             this.button1.UseVisualStyleBackColor = false;
@@ -70,10 +74,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNombre.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(99, 89);
+            this.txtNombre.Location = new System.Drawing.Point(81, 21);
             this.txtNombre.MaxLength = 256;
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(543, 26);
+            this.txtNombre.Size = new System.Drawing.Size(431, 26);
             this.txtNombre.TabIndex = 2;
             // 
             // txtTipo
@@ -82,69 +86,88 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTipo.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTipo.Location = new System.Drawing.Point(99, 158);
+            this.txtTipo.Location = new System.Drawing.Point(81, 20);
             this.txtTipo.MaxLength = 256;
             this.txtTipo.Name = "txtTipo";
-            this.txtTipo.Size = new System.Drawing.Size(543, 26);
+            this.txtTipo.Size = new System.Drawing.Size(431, 26);
             this.txtTipo.TabIndex = 3;
             // 
             // lblNombre
             // 
-            this.lblNombre.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lblNombre.Location = new System.Drawing.Point(12, 97);
+            this.lblNombre.Location = new System.Drawing.Point(17, 21);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(68, 18);
+            this.lblNombre.Size = new System.Drawing.Size(55, 15);
             this.lblNombre.TabIndex = 4;
             this.lblNombre.Text = "Nombre:";
             // 
             // lblTipo
             // 
-            this.lblTipo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTipo.AutoSize = true;
-            this.lblTipo.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipo.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTipo.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lblTipo.Location = new System.Drawing.Point(38, 166);
+            this.lblTipo.Location = new System.Drawing.Point(43, 20);
             this.lblTipo.Name = "lblTipo";
-            this.lblTipo.Size = new System.Drawing.Size(42, 18);
+            this.lblTipo.Size = new System.Drawing.Size(34, 15);
             this.lblTipo.TabIndex = 5;
             this.lblTipo.Text = "Tipo:";
+            this.lblTipo.Click += new System.EventHandler(this.lblTipo_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(355, 18);
+            this.label1.Size = new System.Drawing.Size(331, 16);
             this.label1.TabIndex = 6;
             this.label1.Text = "Ingrese nombre y tipo de nuevo producto a cargar:";
+            // 
+            // panelInput
+            // 
+            this.panelInput.Controls.Add(this.txtNombre);
+            this.panelInput.Controls.Add(this.lblNombre);
+            this.panelInput.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelInput.Location = new System.Drawing.Point(0, 16);
+            this.panelInput.Name = "panelInput";
+            this.panelInput.Size = new System.Drawing.Size(563, 65);
+            this.panelInput.TabIndex = 7;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.lblTipo);
+            this.panel2.Controls.Add(this.txtTipo);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 81);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(563, 65);
+            this.panel2.TabIndex = 8;
             // 
             // Alta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.ClientSize = new System.Drawing.Size(668, 522);
+            this.ClientSize = new System.Drawing.Size(563, 561);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panelInput);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.lblTipo);
-            this.Controls.Add(this.lblNombre);
-            this.Controls.Add(this.txtTipo);
-            this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.linkLabel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.Name = "Alta";
             this.Text = "Alta de nuevo producto";
+            this.Load += new System.EventHandler(this.Alta_Load);
             this.ResizeEnd += new System.EventHandler(this.Alta_ResizeEnd);
+            this.panelInput.ResumeLayout(false);
+            this.panelInput.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -159,5 +182,7 @@
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblTipo;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panelInput;
+        private System.Windows.Forms.Panel panel2;
     }
 }

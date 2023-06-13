@@ -23,7 +23,6 @@ namespace CRUD
         public Registrar_ENTRADA()
         {
             InitializeComponent();
-
             CargarNombresProductos();
 
         }
@@ -31,6 +30,7 @@ namespace CRUD
         private void Registrar_ENTRADA_Load(object sender, EventArgs e)
         {
             rbtnSecretaria.Checked = true;
+            btnAceptar.ForeColor = Color.Black;
         }
 
 
@@ -98,5 +98,19 @@ namespace CRUD
             idProducto = logica.ObtenerIDProducto(nombreProducto);
         }
 
+        private void lblProveedor_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rbtnRemediar_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
