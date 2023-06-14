@@ -17,13 +17,8 @@ namespace CRUD
         public Consulta()
         {
             InitializeComponent();
-            
         }
-
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-        }
-
+        
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Close();      }
@@ -34,10 +29,7 @@ namespace CRUD
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dataGridView1.DefaultCellStyle.Font = new Font("Arial", 8);
             dataGridView1.ForeColor = Color.Black;
-
-
-
-
+            dataGridView1.ReadOnly = true;
         }
 
         private void CargarDatos()
@@ -45,9 +37,6 @@ namespace CRUD
             dataGridView1.DataSource = negocio.ObtenerVistaProductoLoteEntradas();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
-        }
     }
 }

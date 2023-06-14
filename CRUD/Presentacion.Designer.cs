@@ -29,19 +29,25 @@
         private void InitializeComponent()
         {
             this.panelSideMenu = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCalendario = new System.Windows.Forms.Button();
             this.btnConsulta = new System.Windows.Forms.Button();
             this.btnEntrada = new System.Windows.Forms.Button();
             this.btnAlta = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
+            this.picLogoBrown = new System.Windows.Forms.PictureBox();
             this.panelFrm = new System.Windows.Forms.Panel();
             this.panelSideMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogoBrown)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSideMenu
             // 
             this.panelSideMenu.AutoScroll = true;
             this.panelSideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(40)))));
+            this.panelSideMenu.Controls.Add(this.pictureBox1);
             this.panelSideMenu.Controls.Add(this.btnCalendario);
             this.panelSideMenu.Controls.Add(this.btnConsulta);
             this.panelSideMenu.Controls.Add(this.btnEntrada);
@@ -52,6 +58,17 @@
             this.panelSideMenu.Name = "panelSideMenu";
             this.panelSideMenu.Size = new System.Drawing.Size(221, 561);
             this.panelSideMenu.TabIndex = 4;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 361);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Padding = new System.Windows.Forms.Padding(50);
+            this.pictureBox1.Size = new System.Drawing.Size(221, 200);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // btnCalendario
             // 
@@ -102,7 +119,7 @@
             this.btnEntrada.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnEntrada.Size = new System.Drawing.Size(221, 45);
             this.btnEntrada.TabIndex = 2;
-            this.btnEntrada.Text = "Ingreso de lote";
+            this.btnEntrada.Text = "Cargar entrada de lote";
             this.btnEntrada.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEntrada.UseVisualStyleBackColor = true;
             this.btnEntrada.Click += new System.EventHandler(this.btnEntrada_Click);
@@ -128,12 +145,25 @@
             // panelLogo
             // 
             this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(40)))));
+            this.panelLogo.Controls.Add(this.picLogoBrown);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
             this.panelLogo.Size = new System.Drawing.Size(221, 100);
             this.panelLogo.TabIndex = 0;
+            // 
+            // picLogoBrown
+            // 
+            this.picLogoBrown.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picLogoBrown.Location = new System.Drawing.Point(0, 0);
+            this.picLogoBrown.Name = "picLogoBrown";
+            this.picLogoBrown.Padding = new System.Windows.Forms.Padding(40, 30, 40, 30);
+            this.picLogoBrown.Size = new System.Drawing.Size(221, 100);
+            this.picLogoBrown.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picLogoBrown.TabIndex = 0;
+            this.picLogoBrown.TabStop = false;
+            this.picLogoBrown.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // panelFrm
             // 
@@ -158,9 +188,12 @@
             this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "Presentacion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Inicio CAPSIN";
+            this.Text = "CAPSin";
             this.Load += new System.EventHandler(this.Presentacion_Load);
             this.panelSideMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelLogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picLogoBrown)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -173,6 +206,8 @@
         private System.Windows.Forms.Button btnAlta;
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.Panel panelFrm;
+        private System.Windows.Forms.PictureBox picLogoBrown;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

@@ -33,7 +33,6 @@ namespace CRUD
         private void Registrar_ENTRADA_Load(object sender, EventArgs e)
         {
             rbtnSecretaria.Checked = true;
-      
         }
 
 
@@ -51,10 +50,17 @@ namespace CRUD
         }
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            if ((cboxProductos.Text == "") || (txtCantidad.ToString() == "")) MessageBox.Show("Debe completar todos los campos");
+            try { Convert.ToInt32(txtCantidad.Text); }
+            catch 
+            {
+                MessageBox.Show("Los datos ingresados son incorrectos. Debe ingresar un valor numérico para cantidad.","Error");
+                txtCantidad.Text = "";
+            }
+
+
+            if ((cboxProductos.Text == "")||(txtCantidad.Text=="")) MessageBox.Show("Error. Debe completar todos los campos");
             else
             {
-                
                 //inserta registro en tabla Lote
                 int cantidad = Convert.ToInt32(txtCantidad.Text);
                 DateTime fechaVencimiento = dtpVencimiento.Value.Date;
@@ -114,6 +120,14 @@ namespace CRUD
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

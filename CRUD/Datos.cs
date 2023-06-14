@@ -174,6 +174,7 @@ namespace CRUD
     
     //consulta
         public DataTable ObtenerVistaProductoLoteEntradas()
+
         {
             DataTable dataTable = new DataTable();
 
@@ -183,7 +184,7 @@ namespace CRUD
                 {
                     connection.Open();
 
-                    string query = "SELECT * FROM VistaProductosLoteEntradasID";
+                    string query = "SELECT * FROM VistaProductosLoteEntradasID2";
 
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {

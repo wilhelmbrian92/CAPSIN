@@ -158,7 +158,6 @@
             this.Controls.Add(this.panelInput);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.linkLabel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.Name = "Alta";
             this.Text = "Alta de nuevo producto";

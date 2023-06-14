@@ -7,7 +7,7 @@
     <ProjectGuid>{AB3CFA54-0C60-41B0-8414-3C0CAD927026}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>CRUD</RootNamespace>
-    <AssemblyName>CRUD</AssemblyName>
+    <AssemblyName>CAPSin</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -31,6 +31,12 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>monitor_heartbeat_medical_icon_251864.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>CRUD.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -72,6 +78,12 @@
       <DependentUpon>detalleVencimiento.cs</DependentUpon>
     </Compile>
     <Compile Include="Logica.cs" />
+    <Compile Include="Modificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modificar.Designer.cs">
+      <DependentUpon>Modificar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +109,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="detalleVencimiento.resx">
       <DependentUpon>detalleVencimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modificar.resx">
+      <DependentUpon>Modificar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion.resx">
       <DependentUpon>Presentacion.cs</DependentUpon>
@@ -125,6 +140,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="monitor_heartbeat_medical_icon_251864.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

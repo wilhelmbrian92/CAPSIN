@@ -39,7 +39,7 @@ namespace CRUD
                 }
                 catch (Exception z)
                 {
-                    MessageBox.Show(e.ToString());
+                    MessageBox.Show(z.ToString());
                 }
             }
             else MessageBox.Show("El campo Nombre no puede estar vacío");

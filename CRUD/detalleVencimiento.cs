@@ -26,6 +26,7 @@ namespace CRUD
         private void detalleVencimiento_Load(object sender, EventArgs e)
         {
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridView1.ReadOnly = true;
             CargarDatos();
         }
         private void CargarDatos()
