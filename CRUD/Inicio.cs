@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace CRUD
 {
-    public partial class Presentacion : Form
+    public partial class Inicio : Form
     {
 
-        public Presentacion()
+        public Inicio()
         {
             InitializeComponent();
             picLogoBrown.ImageLocation = "https://licencias.transito.brown.gob.ar/assets/images/brown-logo.png";
-            pictureBox1.ImageLocation = "https://img3.freepng.es/dy/9969a45ece9a773020572e4a08a2d6b2/L0KzQoG3U8AzN6dnkZH9cnHxg8HokvVvfF5xjdDwcz3mf8fwhL1kd6N0htM2dnn1hcS0hPl0bZJ4fZ8AZUXnQoLrhvI2QWNmS5CDMES3RIqAUsE2QGQ2TqMDMkO6RISATwBvbz==/transparent-lungs-covid-corona-virus-disease-5e5d21dfb592a3.8044497215831618237437.png";
+            picPulmones.ImageLocation = "https://img3.freepng.es/dy/9969a45ece9a773020572e4a08a2d6b2/L0KzQoG3U8AzN6dnkZH9cnHxg8HokvVvfF5xjdDwcz3mf8fwhL1kd6N0htM2dnn1hcS0hPl0bZJ4fZ8AZUXnQoLrhvI2QWNmS5CDMES3RIqAUsE2QGQ2TqMDMkO6RISATwBvbz==/transparent-lungs-covid-corona-virus-disease-5e5d21dfb592a3.8044497215831618237437.png";
         }
 
 

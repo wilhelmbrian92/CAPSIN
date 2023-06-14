@@ -37,6 +37,17 @@ namespace CRUD
             dataGridView1.DataSource = negocio.ObtenerVistaProductoLoteEntradas();
         }
 
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            DialogResult resultado = MessageBox.Show("¿Está seguro que desea eliminar el registro seleccionado? Una vez que se elimine no podrá recuperarlo.","Alerta",MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
+            if (resultado == DialogResult.OK) { }
+            
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Modificar frmModificar = new Modificar();
+            frmModificar.ShowDialog();
+        }
     }
 }
