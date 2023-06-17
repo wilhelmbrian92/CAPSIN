@@ -29,24 +29,26 @@
         private void InitializeComponent()
         {
             this.panelSideMenu = new System.Windows.Forms.Panel();
-            this.picPulmones = new System.Windows.Forms.PictureBox();
+            this.picLogoBrown = new System.Windows.Forms.PictureBox();
             this.btnCalendario = new System.Windows.Forms.Button();
             this.btnConsulta = new System.Windows.Forms.Button();
             this.btnEntrada = new System.Windows.Forms.Button();
             this.btnAlta = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.picLogoBrown = new System.Windows.Forms.PictureBox();
+            this.picPulmones = new System.Windows.Forms.PictureBox();
             this.panelFrm = new System.Windows.Forms.Panel();
+            this.btnSalida = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picPulmones)).BeginInit();
-            this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogoBrown)).BeginInit();
+            this.panelLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picPulmones)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSideMenu
             // 
             this.panelSideMenu.AutoScroll = true;
             this.panelSideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(40)))));
+            this.panelSideMenu.Controls.Add(this.btnSalida);
             this.panelSideMenu.Controls.Add(this.picLogoBrown);
             this.panelSideMenu.Controls.Add(this.btnCalendario);
             this.panelSideMenu.Controls.Add(this.btnConsulta);
@@ -59,16 +61,17 @@
             this.panelSideMenu.Size = new System.Drawing.Size(224, 561);
             this.panelSideMenu.TabIndex = 4;
             // 
-            // picPulmones
+            // picLogoBrown
             // 
-            this.picPulmones.Dock = System.Windows.Forms.DockStyle.Top;
-            this.picPulmones.Location = new System.Drawing.Point(0, 0);
-            this.picPulmones.Name = "picPulmones";
-            this.picPulmones.Padding = new System.Windows.Forms.Padding(75, 25, 75, 25);
-            this.picPulmones.Size = new System.Drawing.Size(224, 100);
-            this.picPulmones.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picPulmones.TabIndex = 0;
-            this.picPulmones.TabStop = false;
+            this.picLogoBrown.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.picLogoBrown.Location = new System.Drawing.Point(0, 461);
+            this.picLogoBrown.Name = "picLogoBrown";
+            this.picLogoBrown.Padding = new System.Windows.Forms.Padding(25, 30, 55, 30);
+            this.picLogoBrown.Size = new System.Drawing.Size(224, 100);
+            this.picLogoBrown.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picLogoBrown.TabIndex = 0;
+            this.picLogoBrown.TabStop = false;
+            this.picLogoBrown.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // btnCalendario
             // 
@@ -83,7 +86,7 @@
             this.btnCalendario.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnCalendario.Size = new System.Drawing.Size(224, 45);
             this.btnCalendario.TabIndex = 4;
-            this.btnCalendario.Text = "Calendario de vencimientos";
+            this.btnCalendario.Text = "Vencimientos";
             this.btnCalendario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCalendario.UseVisualStyleBackColor = true;
             this.btnCalendario.Click += new System.EventHandler(this.btnCalendario_Click);
@@ -101,7 +104,7 @@
             this.btnConsulta.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnConsulta.Size = new System.Drawing.Size(224, 45);
             this.btnConsulta.TabIndex = 3;
-            this.btnConsulta.Text = "Consultar registro";
+            this.btnConsulta.Text = "Consultar registros";
             this.btnConsulta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConsulta.UseVisualStyleBackColor = true;
             this.btnConsulta.Click += new System.EventHandler(this.btnConsulta_Click);
@@ -119,7 +122,7 @@
             this.btnEntrada.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnEntrada.Size = new System.Drawing.Size(224, 45);
             this.btnEntrada.TabIndex = 2;
-            this.btnEntrada.Text = "Cargar entrada de lote";
+            this.btnEntrada.Text = "Ingreso de productos";
             this.btnEntrada.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEntrada.UseVisualStyleBackColor = true;
             this.btnEntrada.Click += new System.EventHandler(this.btnEntrada_Click);
@@ -137,7 +140,7 @@
             this.btnAlta.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnAlta.Size = new System.Drawing.Size(224, 45);
             this.btnAlta.TabIndex = 1;
-            this.btnAlta.Text = "Alta de nuevo producto";
+            this.btnAlta.Text = "Alta de nuevo artículo";
             this.btnAlta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAlta.UseVisualStyleBackColor = true;
             this.btnAlta.Click += new System.EventHandler(this.btnAlta_Click);
@@ -153,17 +156,16 @@
             this.panelLogo.Size = new System.Drawing.Size(224, 100);
             this.panelLogo.TabIndex = 0;
             // 
-            // picLogoBrown
+            // picPulmones
             // 
-            this.picLogoBrown.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.picLogoBrown.Location = new System.Drawing.Point(0, 461);
-            this.picLogoBrown.Name = "picLogoBrown";
-            this.picLogoBrown.Padding = new System.Windows.Forms.Padding(25, 30, 55, 30);
-            this.picLogoBrown.Size = new System.Drawing.Size(224, 100);
-            this.picLogoBrown.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picLogoBrown.TabIndex = 0;
-            this.picLogoBrown.TabStop = false;
-            this.picLogoBrown.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.picPulmones.Dock = System.Windows.Forms.DockStyle.Top;
+            this.picPulmones.Location = new System.Drawing.Point(0, 0);
+            this.picPulmones.Name = "picPulmones";
+            this.picPulmones.Padding = new System.Windows.Forms.Padding(75, 25, 75, 25);
+            this.picPulmones.Size = new System.Drawing.Size(224, 100);
+            this.picPulmones.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picPulmones.TabIndex = 0;
+            this.picPulmones.TabStop = false;
             // 
             // panelFrm
             // 
@@ -173,6 +175,23 @@
             this.panelFrm.Name = "panelFrm";
             this.panelFrm.Size = new System.Drawing.Size(560, 561);
             this.panelFrm.TabIndex = 5;
+            // 
+            // btnSalida
+            // 
+            this.btnSalida.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSalida.FlatAppearance.BorderSize = 0;
+            this.btnSalida.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnSalida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalida.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalida.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.btnSalida.Location = new System.Drawing.Point(0, 280);
+            this.btnSalida.Name = "btnSalida";
+            this.btnSalida.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnSalida.Size = new System.Drawing.Size(224, 45);
+            this.btnSalida.TabIndex = 5;
+            this.btnSalida.Text = "Salida de productos";
+            this.btnSalida.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalida.UseVisualStyleBackColor = true;
             // 
             // Inicio
             // 
@@ -191,9 +210,9 @@
             this.Text = "CAPSin";
             this.Load += new System.EventHandler(this.Presentacion_Load);
             this.panelSideMenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picPulmones)).EndInit();
-            this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picLogoBrown)).EndInit();
+            this.panelLogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picPulmones)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -208,6 +227,7 @@
         private System.Windows.Forms.Panel panelFrm;
         private System.Windows.Forms.PictureBox picLogoBrown;
         private System.Windows.Forms.PictureBox picPulmones;
+        private System.Windows.Forms.Button btnSalida;
     }
 }
 

@@ -98,7 +98,7 @@ namespace CRUD
         }
 
         //entrada lote
-        public bool InsertarLote(int idProducto, int cantidad, DateTime fechaVencimiento, out int idLote)
+        public bool InsertarLote(string NCaja,int idProducto, int cantidad, DateTime fechaVencimiento, out int idLote)
         {
 
             idLote = 0;
@@ -109,7 +109,7 @@ namespace CRUD
                     connection.Open();
 
                     // Preparar la consulta SQL para la inserción
-                    string query = "INSERT INTO Lote (ProductoID, Cantidad, FechaVencimiento) VALUES (@ProductoID, @Cantidad, @FechaVencimiento); SELECT SCOPE_IDENTITY()";
+                    string query = "INSERT INTO Lote (NCaja,ProductoID, Cantidad, FechaVencimiento) VALUES (@NCaja, @ProductoID, @Cantidad, @FechaVencimiento); SELECT SCOPE_IDENTITY()";
 
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
@@ -117,7 +117,7 @@ namespace CRUD
                         command.Parameters.AddWithValue("@ProductoID", idProducto);
                         command.Parameters.AddWithValue("@Cantidad", cantidad);
                         command.Parameters.AddWithValue("@FechaVencimiento", fechaVencimiento);
-
+                        command.Parameters.AddWithValue("@NCaja", NCaja);
 
                         // Ejecutar la consulta
                         // int rowsAffected = command.ExecuteNonQuery();
@@ -139,7 +139,7 @@ namespace CRUD
             }
         }
 
-        public bool InsertarEntrada(int loteID, DateTime fechaEntrada, string proveedor)
+        public bool InsertarEntrada(int cantidad,int loteID, DateTime fechaEntrada, string proveedor)
         {
             try
             {
@@ -148,11 +148,12 @@ namespace CRUD
                     connection.Open();
 
                     // Preparar la consulta SQL para la inserción
-                    string query = "INSERT INTO Entradas (LoteID, FechaEntrada, Proveedor) VALUES (@LoteID, @FechaEntrada, @Proveedor)";
+                    string query = "INSERT INTO Entradas (Cantidad,LoteID, FechaEntrada, Proveedor) VALUES (@Cantidad, @LoteID, @FechaEntrada, @Proveedor)";
 
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
                         // Asignar los parámetros de la consulta
+                        command.Parameters.AddWithValue("@Cantidad", cantidad);
                         command.Parameters.AddWithValue("@LoteID", loteID);
                         command.Parameters.AddWithValue("@FechaEntrada", fechaEntrada);
                         command.Parameters.AddWithValue("@Proveedor", proveedor);
@@ -184,7 +185,7 @@ namespace CRUD
                 {
                     connection.Open();
 
-                    string query = "SELECT * FROM VistaProductosLoteEntradasID2";
+                    string query = "SELECT * FROM VistaProductosLoteEntradasCinco";
 
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
@@ -212,7 +213,7 @@ namespace CRUD
             {
                 connection.Open();
 
-                string query = "SELECT * FROM VistaProductosLoteEntradasID WHERE FechaVencimiento = @FechaVencimiento";
+                string query = "SELECT * FROM VistaProductosLoteEntradasCinco WHERE Vencimiento = @FechaVencimiento";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {

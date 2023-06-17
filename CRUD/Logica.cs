@@ -39,14 +39,14 @@ namespace CRUD
             return conexionDb.ObtenerIDProducto(nombreProducto);
         }
 
-        public bool InsertarLote(int idProducto, int cantidad, DateTime fechaVencimiento, out int idLote)
+        public bool InsertarLote(string NCaja,int idProducto, int cantidad, DateTime fechaVencimiento, out int idLote)
         {
-            return conexionDb.InsertarLote(idProducto, cantidad, fechaVencimiento, out idLote);
+            return conexionDb.InsertarLote(NCaja,idProducto, cantidad, fechaVencimiento, out idLote);
         }
 
-        public bool InsertarEntrada(int loteID, DateTime fechaEntrada, string proveedor)
+        public bool InsertarEntrada(int cantidad,int loteID, DateTime fechaEntrada, string proveedor)
         {
-            return conexionDb.InsertarEntrada(loteID, fechaEntrada, proveedor);
+            return conexionDb.InsertarEntrada(cantidad,loteID, fechaEntrada, proveedor);
         }
 
         public DataTable ObtenerVistaProductoLoteEntradas()

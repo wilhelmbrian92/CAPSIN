@@ -16,6 +16,7 @@ namespace CRUD
         int idProducto;
         string proveedor;
         int loteID;
+        string NCaja;
         Logica logica = new Logica();
         DateTime fechaEntrada = DateTime.Now.Date;
 
@@ -58,14 +59,15 @@ namespace CRUD
             }
 
 
-            if ((cboxProductos.Text == "")||(txtCantidad.Text=="")) MessageBox.Show("Error. Debe completar todos los campos");
+            if ((cboxProductos.Text == "")||(txtCantidad.Text=="")|| (txtCaja.Text == "")) MessageBox.Show("Error. Debe completar todos los campos");
             else
             {
                 //inserta registro en tabla Lote
                 int cantidad = Convert.ToInt32(txtCantidad.Text);
                 DateTime fechaVencimiento = dtpVencimiento.Value.Date;
+                NCaja = txtCaja.Text;
 
-                if (logica.InsertarLote(idProducto, cantidad, fechaVencimiento, out int idLote))
+                if (logica.InsertarLote(NCaja,idProducto, cantidad, fechaVencimiento, out int idLote))
                 {
                     MessageBox.Show("Los registros se han insertado correctamente en la tabla Lote." );
                     loteID = idLote;
@@ -76,7 +78,7 @@ namespace CRUD
                 }
 
 
-                if (logica.InsertarEntrada(loteID, fechaEntrada, proveedor))
+                if (logica.InsertarEntrada(cantidad,loteID, fechaEntrada, proveedor))
                 {
                     MessageBox.Show("El registro se ha insertado correctamente en la tabla Entradas.");
                 }
@@ -84,11 +86,11 @@ namespace CRUD
                 {
                     MessageBox.Show("Ha ocurrido un error al insertar el registro en la tabla Entradas.");
                 }
-
-
+               
             }
             txtCantidad.Text = "";
             cboxProductos.Text = "";
+            txtCaja.Text = "";
 
         }
 
@@ -129,5 +131,7 @@ namespace CRUD
                 e.Handled = true;
             }
         }
+
+     
     }
 }

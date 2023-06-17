@@ -46,7 +46,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(514, 147);
+            this.dataGridView1.Size = new System.Drawing.Size(595, 147);
             this.dataGridView1.TabIndex = 0;
             // 
             // lbl1
@@ -66,7 +66,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(10, 10);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(514, 44);
+            this.panel1.Size = new System.Drawing.Size(595, 44);
             this.panel1.TabIndex = 2;
             // 
             // panel2
@@ -75,7 +75,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(10, 54);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(514, 147);
+            this.panel2.Size = new System.Drawing.Size(595, 147);
             this.panel2.TabIndex = 3;
             // 
             // detalleVencimiento
@@ -83,7 +83,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.ClientSize = new System.Drawing.Size(534, 211);
+            this.ClientSize = new System.Drawing.Size(615, 211);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.MinimumSize = new System.Drawing.Size(550, 250);
