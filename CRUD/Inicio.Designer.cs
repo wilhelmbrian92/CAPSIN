@@ -192,6 +192,7 @@
             this.btnSalida.Text = "Salida de productos";
             this.btnSalida.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalida.UseVisualStyleBackColor = true;
+            this.btnSalida.Click += new System.EventHandler(this.btnSalida_Click);
             // 
             // Inicio
             // 

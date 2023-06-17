@@ -66,6 +66,9 @@ namespace CRUD
 
         }
 
-        
+        private void btnSalida_Click(object sender, EventArgs e)
+        {
+            abrirPanelFrm(new Salida());
+        }
     }
 }

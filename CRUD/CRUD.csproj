@@ -99,6 +99,12 @@
     <Compile Include="EntradaLote.Designer.cs">
       <DependentUpon>EntradaLote.cs</DependentUpon>
     </Compile>
+    <Compile Include="Salida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Salida.Designer.cs">
+      <DependentUpon>Salida.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Alta.resx">
       <DependentUpon>Alta.cs</DependentUpon>
     </EmbeddedResource>
@@ -128,6 +134,9 @@
     </Compile>
     <EmbeddedResource Include="EntradaLote.resx">
       <DependentUpon>EntradaLote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Salida.resx">
+      <DependentUpon>Salida.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
