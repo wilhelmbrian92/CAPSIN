@@ -186,7 +186,7 @@ namespace CRUD
                 {
                     connection.Open();
 
-                    string query = "SELECT * FROM VistaProductosLoteEntradasCinco";
+                    string query = "SELECT * FROM VistaProductosLoteEntradasSeis";
 
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
