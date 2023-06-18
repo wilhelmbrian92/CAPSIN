@@ -98,7 +98,7 @@ namespace CRUD
         }
 
         //entrada lote
-        public bool InsertarLote(string NCaja,int idProducto, int cantidad, DateTime fechaVencimiento, out int idLote)
+        public bool InsertarLote(string presentacion, string NCaja, int idProducto, int cantidad, DateTime fechaVencimiento, out int idLote)
         {
 
             idLote = 0;
@@ -109,7 +109,7 @@ namespace CRUD
                     connection.Open();
 
                     // Preparar la consulta SQL para la inserción
-                    string query = "INSERT INTO Lote (NCaja,ProductoID, Cantidad, FechaVencimiento) VALUES (@NCaja, @ProductoID, @Cantidad, @FechaVencimiento); SELECT SCOPE_IDENTITY()";
+                    string query = "INSERT INTO Lote (Presentacion,NCaja,ProductoID, Cantidad, FechaVencimiento) VALUES (@presentacion,@NCaja, @ProductoID, @Cantidad, @FechaVencimiento); SELECT SCOPE_IDENTITY()";
 
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
@@ -118,6 +118,7 @@ namespace CRUD
                         command.Parameters.AddWithValue("@Cantidad", cantidad);
                         command.Parameters.AddWithValue("@FechaVencimiento", fechaVencimiento);
                         command.Parameters.AddWithValue("@NCaja", NCaja);
+                        command.Parameters.AddWithValue("@presentacion", presentacion);
 
                         // Ejecutar la consulta
                         // int rowsAffected = command.ExecuteNonQuery();

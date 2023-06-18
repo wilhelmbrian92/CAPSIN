@@ -15,6 +15,7 @@ namespace CRUD
     {
         int idProducto;
         string proveedor;
+        string presentacion;
         int loteID;
         string NCaja;
         Logica logica = new Logica();
@@ -33,9 +34,8 @@ namespace CRUD
 
         private void Registrar_ENTRADA_Load(object sender, EventArgs e)
         {
-            rbtnSecretaria.Checked = true;
+           
         }
-
 
         private void CargarNombresProductos()
         {
@@ -58,16 +58,17 @@ namespace CRUD
                 txtCantidad.Text = "";
             }
 
-
-            if ((cboxProductos.Text == "")||(txtCantidad.Text=="")|| (txtCaja.Text == "")) MessageBox.Show("Error. Debe completar todos los campos");
+            if ((cboxProductos.Text == "")||(txtCantidad.Text=="")|| (txtCaja.Text == "") || (txtProveedor.Text == "") || (txtPresentacion.Text == "")) MessageBox.Show("Error. Debe completar todos los campos");
             else
             {
                 //inserta registro en tabla Lote
                 int cantidad = Convert.ToInt32(txtCantidad.Text);
                 DateTime fechaVencimiento = dtpVencimiento.Value.Date;
                 NCaja = txtCaja.Text;
+               proveedor = txtProveedor.Text;
+                presentacion = txtPresentacion.Text;
 
-                if (logica.InsertarLote(NCaja,idProducto, cantidad, fechaVencimiento, out int idLote))
+                if (logica.InsertarLote(presentacion,NCaja,idProducto, cantidad, fechaVencimiento, out int idLote))
                 {
                     MessageBox.Show("Los registros se han insertado correctamente en la tabla Lote." );
                     loteID = idLote;
@@ -91,37 +92,14 @@ namespace CRUD
             txtCantidad.Text = "";
             cboxProductos.Text = "";
             txtCaja.Text = "";
-
+            txtProveedor.Text = "";
+            txtPresentacion.Text = "";
         }
-
-
-        private void rbtnSecretaria_CheckedChanged(object sender, EventArgs e)
-        {
-            if (rbtnSecretaria.Checked) proveedor = "Secretaría";
-            if (rbtnRemediar.Checked) proveedor = "Remediar";
-            if (rbtnSecretaria.Checked == false) rbtnRemediar.Checked = true;
-            else rbtnSecretaria.Checked = true;
-        }
-
+        
         private void cboxProductos_SelectedIndexChanged(object sender, EventArgs e)
         {
             string nombreProducto = cboxProductos.SelectedItem.ToString();
             idProducto = logica.ObtenerIDProducto(nombreProducto);
-        }
-
-        private void lblProveedor_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void rbtnRemediar_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
