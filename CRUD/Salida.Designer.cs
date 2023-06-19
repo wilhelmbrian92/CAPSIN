@@ -30,7 +30,6 @@
         {
             this.lblCaja = new System.Windows.Forms.Label();
             this.dgvDetalle = new System.Windows.Forms.DataGridView();
-            this.txtCaja = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -40,6 +39,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnConfirmar = new System.Windows.Forms.Button();
+            this.cboxProductos = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalle)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -52,45 +52,50 @@
             this.lblCaja.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.lblCaja.Location = new System.Drawing.Point(21, 36);
             this.lblCaja.Name = "lblCaja";
-            this.lblCaja.Size = new System.Drawing.Size(72, 16);
+            this.lblCaja.Size = new System.Drawing.Size(64, 16);
             this.lblCaja.TabIndex = 0;
-            this.lblCaja.Text = "ID de Caja:";
+            this.lblCaja.Text = "Producto:";
             // 
             // dgvDetalle
             // 
+            this.dgvDetalle.AllowUserToAddRows = false;
+            this.dgvDetalle.AllowUserToDeleteRows = false;
+            this.dgvDetalle.AllowUserToResizeColumns = false;
+            this.dgvDetalle.AllowUserToResizeRows = false;
             this.dgvDetalle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvDetalle.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.dgvDetalle.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvDetalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDetalle.Location = new System.Drawing.Point(15, 19);
+            this.dgvDetalle.Location = new System.Drawing.Point(15, 39);
+            this.dgvDetalle.MultiSelect = false;
             this.dgvDetalle.Name = "dgvDetalle";
-            this.dgvDetalle.Size = new System.Drawing.Size(518, 186);
+            this.dgvDetalle.ReadOnly = true;
+            this.dgvDetalle.RowHeadersVisible = false;
+            this.dgvDetalle.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvDetalle.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvDetalle.Size = new System.Drawing.Size(534, 186);
             this.dgvDetalle.TabIndex = 1;
-            // 
-            // txtCaja
-            // 
-            this.txtCaja.Location = new System.Drawing.Point(99, 36);
-            this.txtCaja.Name = "txtCaja";
-            this.txtCaja.Size = new System.Drawing.Size(333, 22);
-            this.txtCaja.TabIndex = 2;
             // 
             // btnBuscar
             // 
             this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBuscar.Location = new System.Drawing.Point(458, 36);
+            this.btnBuscar.Location = new System.Drawing.Point(474, 30);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 23);
             this.btnBuscar.TabIndex = 3;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.cboxProductos);
             this.panel1.Controls.Add(this.lblCaja);
             this.panel1.Controls.Add(this.btnBuscar);
-            this.panel1.Controls.Add(this.txtCaja);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(545, 100);
+            this.panel1.Size = new System.Drawing.Size(561, 100);
             this.panel1.TabIndex = 4;
             // 
             // panel2
@@ -99,7 +104,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 100);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(545, 421);
+            this.panel2.Size = new System.Drawing.Size(561, 460);
             this.panel2.TabIndex = 5;
             // 
             // label2
@@ -107,7 +112,7 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label2.Location = new System.Drawing.Point(30, 140);
+            this.label2.Location = new System.Drawing.Point(22, 137);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 16);
             this.label2.TabIndex = 6;
@@ -151,34 +156,45 @@
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 329);
+            this.panel3.Location = new System.Drawing.Point(0, 368);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(545, 192);
+            this.panel3.Size = new System.Drawing.Size(561, 192);
             this.panel3.TabIndex = 9;
             // 
             // btnConfirmar
             // 
             this.btnConfirmar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnConfirmar.Location = new System.Drawing.Point(458, 133);
+            this.btnConfirmar.Location = new System.Drawing.Point(474, 133);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(75, 23);
             this.btnConfirmar.TabIndex = 4;
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.UseVisualStyleBackColor = true;
             // 
+            // cboxProductos
+            // 
+            this.cboxProductos.FormattingEnabled = true;
+            this.cboxProductos.Location = new System.Drawing.Point(99, 30);
+            this.cboxProductos.Name = "cboxProductos";
+            this.cboxProductos.Size = new System.Drawing.Size(333, 24);
+            this.cboxProductos.TabIndex = 4;
+            this.cboxProductos.SelectedIndexChanged += new System.EventHandler(this.cboxProductos_SelectedIndexChanged);
+            // 
             // Salida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.ClientSize = new System.Drawing.Size(545, 521);
+            this.ClientSize = new System.Drawing.Size(561, 560);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Salida";
             this.Text = "Salida";
+            this.Load += new System.EventHandler(this.Salida_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalle)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -193,7 +209,6 @@
 
         private System.Windows.Forms.Label lblCaja;
         private System.Windows.Forms.DataGridView dgvDetalle;
-        private System.Windows.Forms.TextBox txtCaja;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
@@ -203,5 +218,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnConfirmar;
+        private System.Windows.Forms.ComboBox cboxProductos;
     }
 }

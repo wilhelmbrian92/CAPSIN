@@ -73,6 +73,11 @@ namespace CRUD
             return fechasResaltadas.ToArray();
         }
 
+        public DataTable ObtenerProductosPorID(int productoID)
+        {
+            return conexionDb.ObtenerProductosPorID(productoID);
+        }
+
     }
 
 }

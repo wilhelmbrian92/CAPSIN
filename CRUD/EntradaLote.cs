@@ -34,7 +34,6 @@ namespace CRUD
 
         private void Registrar_ENTRADA_Load(object sender, EventArgs e)
         {
-           
         }
 
         private void CargarNombresProductos()
@@ -91,7 +90,7 @@ namespace CRUD
             }
             txtCantidad.Text = "";
             cboxProductos.Text = "";
-            txtCaja.Text = "";
+            
             txtProveedor.Text = "";
             txtPresentacion.Text = "";
         }

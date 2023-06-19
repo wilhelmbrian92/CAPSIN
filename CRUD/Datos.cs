@@ -214,7 +214,7 @@ namespace CRUD
             {
                 connection.Open();
 
-                string query = "SELECT * FROM VistaProductosLoteEntradasCinco WHERE Vencimiento = @FechaVencimiento";
+                string query = "SELECT * FROM VistaProductosLoteEntradasSeis WHERE Vencimiento = @FechaVencimiento";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
@@ -254,6 +254,28 @@ namespace CRUD
             return fechasVencimiento.ToArray();
         }
 
+
+        public DataTable ObtenerProductosPorID(int productoID)
+        {
+            DataTable dataTable = new DataTable();
+
+            using (SqlConnection connection = new SqlConnection(s))
+            {
+                connection.Open();
+
+                string query = "SELECT * FROM VistaProductoLoteSalida WHERE ID = @ProductoID";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@ProductoID", productoID);
+
+                    SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+                    dataAdapter.Fill(dataTable);
+                }
+            }
+
+            return dataTable;
+        }
 
     }
 
