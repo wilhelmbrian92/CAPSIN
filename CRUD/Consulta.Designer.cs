@@ -44,13 +44,13 @@
             // 
             this.dgvEntrada.AllowUserToResizeColumns = false;
             this.dgvEntrada.AllowUserToResizeRows = false;
-            this.dgvEntrada.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvEntrada.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvEntrada.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvEntrada.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.dgvEntrada.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvEntrada.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEntrada.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvEntrada.GridColor = System.Drawing.SystemColors.ControlText;
-            this.dgvEntrada.Location = new System.Drawing.Point(31, 38);
+            this.dgvEntrada.Location = new System.Drawing.Point(0, 26);
             this.dgvEntrada.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.dgvEntrada.MultiSelect = false;
             this.dgvEntrada.Name = "dgvEntrada";
@@ -58,7 +58,7 @@
             this.dgvEntrada.RowHeadersVisible = false;
             this.dgvEntrada.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvEntrada.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvEntrada.Size = new System.Drawing.Size(498, 207);
+            this.dgvEntrada.Size = new System.Drawing.Size(560, 254);
             this.dgvEntrada.TabIndex = 16;
             // 
             // label1
@@ -77,6 +77,7 @@
             this.panelEntrada.Controls.Add(this.dgvEntrada);
             this.panelEntrada.Controls.Add(this.label1);
             this.panelEntrada.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelEntrada.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelEntrada.Location = new System.Drawing.Point(0, 0);
             this.panelEntrada.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panelEntrada.Name = "panelEntrada";
@@ -88,6 +89,7 @@
             this.panelSalida.Controls.Add(this.dgvSalida);
             this.panelSalida.Controls.Add(this.label2);
             this.panelSalida.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelSalida.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelSalida.Location = new System.Drawing.Point(0, 287);
             this.panelSalida.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panelSalida.Name = "panelSalida";
@@ -98,13 +100,13 @@
             // 
             this.dgvSalida.AllowUserToResizeColumns = false;
             this.dgvSalida.AllowUserToResizeRows = false;
-            this.dgvSalida.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvSalida.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvSalida.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvSalida.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.dgvSalida.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvSalida.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSalida.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvSalida.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvSalida.GridColor = System.Drawing.SystemColors.ControlText;
-            this.dgvSalida.Location = new System.Drawing.Point(31, 36);
+            this.dgvSalida.Location = new System.Drawing.Point(0, 26);
             this.dgvSalida.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.dgvSalida.MultiSelect = false;
             this.dgvSalida.Name = "dgvSalida";
@@ -112,7 +114,7 @@
             this.dgvSalida.RowHeadersVisible = false;
             this.dgvSalida.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvSalida.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSalida.Size = new System.Drawing.Size(498, 207);
+            this.dgvSalida.Size = new System.Drawing.Size(560, 248);
             this.dgvSalida.TabIndex = 16;
             // 
             // label2

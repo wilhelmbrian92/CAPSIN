@@ -27,11 +27,6 @@ namespace CRUD
         {
             CargarDatos();
             CargarSalidas();
-
-            dgvEntrada.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            dgvEntrada.DefaultCellStyle.Font = new Font("Arial", 8);
-            dgvEntrada.ForeColor = Color.Black;
-            dgvEntrada.ReadOnly = true;
         }
 
         private void CargarDatos()

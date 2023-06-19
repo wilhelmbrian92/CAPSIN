@@ -31,11 +31,11 @@ namespace CRUD
 
                 try
                 {
-                    
-                    negocio.altaProducto(txtNombre.Text, txtTipo.Text);
+                    string tipo = "";
+                    negocio.altaProducto(txtNombre.Text,tipo);
                     MessageBox.Show("El proceso ha finalizado exitosamente.");
                     txtNombre.Text = "";
-                    txtTipo.Text = "";
+                   
                 }
                 catch (Exception z)
                 {
