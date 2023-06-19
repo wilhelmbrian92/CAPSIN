@@ -48,7 +48,7 @@ namespace CRUD
 
         private void btnConsulta_Click(object sender, EventArgs e)
         {
-            abrirPanelFrm(new Consulta());
+            abrirPanelFrm(new Salida());
         }
 
         private void btnCalendario_Click(object sender, EventArgs e)
@@ -68,7 +68,8 @@ namespace CRUD
 
         private void btnSalida_Click(object sender, EventArgs e)
         {
-            abrirPanelFrm(new Salida());
+            abrirPanelFrm(new Consulta());
+            
         }
     }
 }

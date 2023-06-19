@@ -263,7 +263,7 @@ namespace CRUD
             {
                 connection.Open();
 
-                string query = "SELECT Lote,Producto,Caja,Restante,Vencimiento from VistaProductoLoteSalida WHERE ID = @ProductoID";
+                string query = "SELECT Lote,Producto,Presentacion,Caja,Restante,Vencimiento from VistaProductoLoteSalida WHERE ID = @ProductoID";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {

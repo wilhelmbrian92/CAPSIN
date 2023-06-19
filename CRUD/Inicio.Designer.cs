@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.panelSideMenu = new System.Windows.Forms.Panel();
+            this.btnConsultas = new System.Windows.Forms.Button();
             this.picLogoBrown = new System.Windows.Forms.PictureBox();
             this.btnCalendario = new System.Windows.Forms.Button();
-            this.btnConsulta = new System.Windows.Forms.Button();
+            this.btnSalidas = new System.Windows.Forms.Button();
             this.btnEntrada = new System.Windows.Forms.Button();
             this.btnAlta = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.picPulmones = new System.Windows.Forms.PictureBox();
             this.panelFrm = new System.Windows.Forms.Panel();
-            this.btnSalida = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogoBrown)).BeginInit();
             this.panelLogo.SuspendLayout();
@@ -48,10 +48,10 @@
             // 
             this.panelSideMenu.AutoScroll = true;
             this.panelSideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(40)))));
-            this.panelSideMenu.Controls.Add(this.btnSalida);
+            this.panelSideMenu.Controls.Add(this.btnConsultas);
             this.panelSideMenu.Controls.Add(this.picLogoBrown);
             this.panelSideMenu.Controls.Add(this.btnCalendario);
-            this.panelSideMenu.Controls.Add(this.btnConsulta);
+            this.panelSideMenu.Controls.Add(this.btnSalidas);
             this.panelSideMenu.Controls.Add(this.btnEntrada);
             this.panelSideMenu.Controls.Add(this.btnAlta);
             this.panelSideMenu.Controls.Add(this.panelLogo);
@@ -60,6 +60,24 @@
             this.panelSideMenu.Name = "panelSideMenu";
             this.panelSideMenu.Size = new System.Drawing.Size(224, 561);
             this.panelSideMenu.TabIndex = 4;
+            // 
+            // btnConsultas
+            // 
+            this.btnConsultas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnConsultas.FlatAppearance.BorderSize = 0;
+            this.btnConsultas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnConsultas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultas.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultas.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.btnConsultas.Location = new System.Drawing.Point(0, 280);
+            this.btnConsultas.Name = "btnConsultas";
+            this.btnConsultas.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnConsultas.Size = new System.Drawing.Size(224, 45);
+            this.btnConsultas.TabIndex = 5;
+            this.btnConsultas.Text = "Historial de registros";
+            this.btnConsultas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConsultas.UseVisualStyleBackColor = true;
+            this.btnConsultas.Click += new System.EventHandler(this.btnSalida_Click);
             // 
             // picLogoBrown
             // 
@@ -91,23 +109,23 @@
             this.btnCalendario.UseVisualStyleBackColor = true;
             this.btnCalendario.Click += new System.EventHandler(this.btnCalendario_Click);
             // 
-            // btnConsulta
+            // btnSalidas
             // 
-            this.btnConsulta.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnConsulta.FlatAppearance.BorderSize = 0;
-            this.btnConsulta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnConsulta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsulta.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsulta.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.btnConsulta.Location = new System.Drawing.Point(0, 190);
-            this.btnConsulta.Name = "btnConsulta";
-            this.btnConsulta.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnConsulta.Size = new System.Drawing.Size(224, 45);
-            this.btnConsulta.TabIndex = 3;
-            this.btnConsulta.Text = "Consultar registros";
-            this.btnConsulta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsulta.UseVisualStyleBackColor = true;
-            this.btnConsulta.Click += new System.EventHandler(this.btnConsulta_Click);
+            this.btnSalidas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSalidas.FlatAppearance.BorderSize = 0;
+            this.btnSalidas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnSalidas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalidas.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalidas.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.btnSalidas.Location = new System.Drawing.Point(0, 190);
+            this.btnSalidas.Name = "btnSalidas";
+            this.btnSalidas.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnSalidas.Size = new System.Drawing.Size(224, 45);
+            this.btnSalidas.TabIndex = 3;
+            this.btnSalidas.Text = "Salida de productos";
+            this.btnSalidas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalidas.UseVisualStyleBackColor = true;
+            this.btnSalidas.Click += new System.EventHandler(this.btnConsulta_Click);
             // 
             // btnEntrada
             // 
@@ -176,24 +194,6 @@
             this.panelFrm.Size = new System.Drawing.Size(560, 561);
             this.panelFrm.TabIndex = 5;
             // 
-            // btnSalida
-            // 
-            this.btnSalida.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSalida.FlatAppearance.BorderSize = 0;
-            this.btnSalida.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnSalida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalida.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalida.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.btnSalida.Location = new System.Drawing.Point(0, 280);
-            this.btnSalida.Name = "btnSalida";
-            this.btnSalida.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnSalida.Size = new System.Drawing.Size(224, 45);
-            this.btnSalida.TabIndex = 5;
-            this.btnSalida.Text = "Salida de productos";
-            this.btnSalida.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalida.UseVisualStyleBackColor = true;
-            this.btnSalida.Click += new System.EventHandler(this.btnSalida_Click);
-            // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
@@ -221,14 +221,14 @@
         #endregion
         private System.Windows.Forms.Panel panelSideMenu;
         private System.Windows.Forms.Button btnCalendario;
-        private System.Windows.Forms.Button btnConsulta;
+        private System.Windows.Forms.Button btnSalidas;
         private System.Windows.Forms.Button btnEntrada;
         private System.Windows.Forms.Button btnAlta;
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.Panel panelFrm;
         private System.Windows.Forms.PictureBox picLogoBrown;
         private System.Windows.Forms.PictureBox picPulmones;
-        private System.Windows.Forms.Button btnSalida;
+        private System.Windows.Forms.Button btnConsultas;
     }
 }
 
