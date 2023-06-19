@@ -277,6 +277,25 @@ namespace CRUD
             return dataTable;
         }
 
+        public void ActualizarCantidad(int loteID, int nuevaCantidad)
+        {
+            using (SqlConnection connection = new SqlConnection(s))
+            {
+                connection.Open();
+
+                string query = "UPDATE Lote SET Cantidad = @NuevaCantidad WHERE ID = @LoteID";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@NuevaCantidad", nuevaCantidad);
+                    command.Parameters.AddWithValue("@LoteID", loteID);
+
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
+
     }
 
 }

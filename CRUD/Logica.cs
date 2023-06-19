@@ -78,6 +78,11 @@ namespace CRUD
             return conexionDb.ObtenerProductosPorID(productoID);
         }
 
+        public void ActualizarCantidad(int loteID, int nuevaCantidad)
+        {
+            conexionDb.ActualizarCantidad(loteID, nuevaCantidad);
+        }
+
     }
 
 }

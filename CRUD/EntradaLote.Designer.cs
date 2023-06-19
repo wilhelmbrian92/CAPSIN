@@ -116,6 +116,7 @@
             this.txtCantidad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCantidad.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCantidad.Location = new System.Drawing.Point(102, 69);
+            this.txtCantidad.MaxLength = 10;
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(443, 22);
             this.txtCantidad.TabIndex = 10;
@@ -142,7 +143,6 @@
             this.lblProveedor.TabIndex = 1;
             this.lblProveedor.Text = "Proveedor:";
             this.lblProveedor.TextAlign = System.Drawing.ContentAlignment.TopRight;
-          
             // 
             // panel1
             // 

@@ -26,15 +26,15 @@ namespace CRUD
         private void Consulta_Load(object sender, EventArgs e)
         {
             CargarDatos();
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            dataGridView1.DefaultCellStyle.Font = new Font("Arial", 8);
-            dataGridView1.ForeColor = Color.Black;
-            dataGridView1.ReadOnly = true;
+            dgvEntrada.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgvEntrada.DefaultCellStyle.Font = new Font("Arial", 8);
+            dgvEntrada.ForeColor = Color.Black;
+            dgvEntrada.ReadOnly = true;
         }
 
         private void CargarDatos()
         {
-            dataGridView1.DataSource = negocio.ObtenerVistaProductoLoteEntradas();
+            dgvEntrada.DataSource = negocio.ObtenerVistaProductoLoteEntradas();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
