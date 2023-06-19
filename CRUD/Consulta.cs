@@ -26,6 +26,8 @@ namespace CRUD
         private void Consulta_Load(object sender, EventArgs e)
         {
             CargarDatos();
+            CargarSalidas();
+
             dgvEntrada.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dgvEntrada.DefaultCellStyle.Font = new Font("Arial", 8);
             dgvEntrada.ForeColor = Color.Black;
@@ -49,5 +51,11 @@ namespace CRUD
             Modificar frmModificar = new Modificar();
             frmModificar.ShowDialog();
         }
+        private void CargarSalidas()
+        {
+            DataTable dtSalidas = negocio.ObtenerSalidas();
+            dgvSalida.DataSource = dtSalidas;
+        }
+
     }
 }

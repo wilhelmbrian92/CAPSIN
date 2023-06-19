@@ -89,6 +89,15 @@ namespace CRUD
                         negocioSalida.ActualizarCantidad(loteID, nuevaCantidad);
                         MessageBox.Show("La actualización se realizó correctamente.");
                         btnBuscar_Click(null,null);
+
+                        
+                        DateTime fechaSalida = DateTime.Now;
+
+                        negocioSalida.InsertarSalida(loteID, Convert.ToInt32(txtCantidad.Text), fechaSalida);
+
+                        MessageBox.Show("La salida se ha registrado correctamente.");
+
+
                     }
                     catch { MessageBox.Show("Hubo un error al tratar de procesar su solicitud. Por favor verifique que los campos sean correctos y vuelva a intentarlo."); }
                 }

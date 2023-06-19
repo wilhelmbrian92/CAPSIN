@@ -89,7 +89,7 @@
             this.picLogoBrown.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picLogoBrown.TabIndex = 0;
             this.picLogoBrown.TabStop = false;
-            this.picLogoBrown.Click += new System.EventHandler(this.pictureBox1_Click);
+           
             // 
             // btnCalendario
             // 

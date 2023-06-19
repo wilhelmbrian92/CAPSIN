@@ -296,6 +296,48 @@ namespace CRUD
         }
 
 
+        public void InsertarSalida(int idLote, int cantidad, DateTime fechaSalida)
+        {
+            using (SqlConnection connection = new SqlConnection(s))
+            {
+                connection.Open();
+
+                string query = "INSERT INTO Salidas (ID_Lote, cantidad, fecha_salida) VALUES (@ID_Lote, @Cantidad, @FechaSalida)";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@ID_Lote", idLote);
+                    command.Parameters.AddWithValue("@Cantidad", cantidad);
+                    command.Parameters.AddWithValue("@FechaSalida", fechaSalida);
+
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public DataTable ObtenerSalidas()
+        {
+            DataTable dtSalidas = new DataTable();
+
+            using (SqlConnection connection = new SqlConnection(s))
+            {
+                connection.Open();
+                
+                string query = "SELECT * FROM VistaSalidasLoteProducto4";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                    {
+                        adapter.Fill(dtSalidas);
+                    }
+                }
+            }
+
+            return dtSalidas;
+        }
+
+
     }
 
 }

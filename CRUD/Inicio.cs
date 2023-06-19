@@ -60,12 +60,7 @@ namespace CRUD
         {
 
         }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void btnSalida_Click(object sender, EventArgs e)
         {
             abrirPanelFrm(new Consulta());

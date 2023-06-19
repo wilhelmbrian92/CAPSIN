@@ -83,6 +83,16 @@ namespace CRUD
             conexionDb.ActualizarCantidad(loteID, nuevaCantidad);
         }
 
+        public void InsertarSalida(int idLote, int cantidad, DateTime fechaSalida)
+        {
+            conexionDb.InsertarSalida(idLote, cantidad, fechaSalida);
+        }
+
+        public DataTable ObtenerSalidas()
+        {
+            return conexionDb.ObtenerSalidas();
+        }
+
     }
 
 }

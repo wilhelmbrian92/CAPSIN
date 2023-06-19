@@ -87,7 +87,8 @@
             // 
             this.panelSalida.Controls.Add(this.dgvSalida);
             this.panelSalida.Controls.Add(this.label2);
-            this.panelSalida.Location = new System.Drawing.Point(0, 286);
+            this.panelSalida.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelSalida.Location = new System.Drawing.Point(0, 287);
             this.panelSalida.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panelSalida.Name = "panelSalida";
             this.panelSalida.Size = new System.Drawing.Size(560, 274);
