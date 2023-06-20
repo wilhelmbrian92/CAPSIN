@@ -36,12 +36,9 @@
             this.btnEntrada = new System.Windows.Forms.Button();
             this.btnAlta = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.picPulmones = new System.Windows.Forms.PictureBox();
             this.panelFrm = new System.Windows.Forms.Panel();
             this.panelSideMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogoBrown)).BeginInit();
-            this.panelLogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picPulmones)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSideMenu
@@ -89,7 +86,6 @@
             this.picLogoBrown.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picLogoBrown.TabIndex = 0;
             this.picLogoBrown.TabStop = false;
-           
             // 
             // btnCalendario
             // 
@@ -166,24 +162,12 @@
             // panelLogo
             // 
             this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(40)))));
-            this.panelLogo.Controls.Add(this.picPulmones);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
             this.panelLogo.Size = new System.Drawing.Size(224, 100);
             this.panelLogo.TabIndex = 0;
-            // 
-            // picPulmones
-            // 
-            this.picPulmones.Dock = System.Windows.Forms.DockStyle.Top;
-            this.picPulmones.Location = new System.Drawing.Point(0, 0);
-            this.picPulmones.Name = "picPulmones";
-            this.picPulmones.Padding = new System.Windows.Forms.Padding(75, 25, 75, 25);
-            this.picPulmones.Size = new System.Drawing.Size(224, 100);
-            this.picPulmones.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picPulmones.TabIndex = 0;
-            this.picPulmones.TabStop = false;
             // 
             // panelFrm
             // 
@@ -212,8 +196,6 @@
             this.Load += new System.EventHandler(this.Presentacion_Load);
             this.panelSideMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picLogoBrown)).EndInit();
-            this.panelLogo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picPulmones)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -227,7 +209,6 @@
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.Panel panelFrm;
         private System.Windows.Forms.PictureBox picLogoBrown;
-        private System.Windows.Forms.PictureBox picPulmones;
         private System.Windows.Forms.Button btnConsultas;
     }
 }
