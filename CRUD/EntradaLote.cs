@@ -19,7 +19,7 @@ namespace CRUD
         int loteID;
         string NCaja;
         Logica logica = new Logica();
-        DateTime fechaEntrada = DateTime.Now.Date;
+       
 
         //constructor
         public Registrar_ENTRADA()
@@ -63,6 +63,7 @@ namespace CRUD
                 //inserta registro en tabla Lote
                 int cantidad = Convert.ToInt32(txtCantidad.Text);
                 DateTime fechaVencimiento = dtpVencimiento.Value.Date;
+                DateTime fechaIngreso = dtpIngreso.Value.Date;
                 NCaja = txtCaja.Text;
                proveedor = txtProveedor.Text;
                 presentacion = txtPresentacion.Text;
@@ -78,7 +79,7 @@ namespace CRUD
                 }
 
 
-                if (logica.InsertarEntrada(cantidad,loteID, fechaEntrada, proveedor))
+                if (logica.InsertarEntrada(cantidad,loteID, fechaIngreso, proveedor))
                 {
                     MessageBox.Show("El registro se ha insertado correctamente en la tabla Entradas.");
                 }

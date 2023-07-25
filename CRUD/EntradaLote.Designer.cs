@@ -43,6 +43,8 @@
             this.lblPresentacion = new System.Windows.Forms.Label();
             this.txtCaja = new System.Windows.Forms.TextBox();
             this.lblCaja = new System.Windows.Forms.Label();
+            this.lblFechaIngreso = new System.Windows.Forms.Label();
+            this.dtpIngreso = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,7 +54,7 @@
             this.lblProducto.AutoSize = true;
             this.lblProducto.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProducto.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lblProducto.Location = new System.Drawing.Point(31, 38);
+            this.lblProducto.Location = new System.Drawing.Point(31, 25);
             this.lblProducto.Name = "lblProducto";
             this.lblProducto.Size = new System.Drawing.Size(69, 16);
             this.lblProducto.TabIndex = 0;
@@ -64,7 +66,7 @@
             this.cboxProductos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cboxProductos.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboxProductos.FormattingEnabled = true;
-            this.cboxProductos.Location = new System.Drawing.Point(102, 35);
+            this.cboxProductos.Location = new System.Drawing.Point(102, 22);
             this.cboxProductos.Name = "cboxProductos";
             this.cboxProductos.Size = new System.Drawing.Size(443, 24);
             this.cboxProductos.TabIndex = 2;
@@ -91,7 +93,7 @@
             this.lblCantidad.AutoSize = true;
             this.lblCantidad.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCantidad.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lblCantidad.Location = new System.Drawing.Point(31, 72);
+            this.lblCantidad.Location = new System.Drawing.Point(31, 59);
             this.lblCantidad.Name = "lblCantidad";
             this.lblCantidad.Size = new System.Drawing.Size(69, 16);
             this.lblCantidad.TabIndex = 7;
@@ -104,7 +106,7 @@
             this.lblVencimiento.AutoSize = true;
             this.lblVencimiento.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVencimiento.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lblVencimiento.Location = new System.Drawing.Point(9, 106);
+            this.lblVencimiento.Location = new System.Drawing.Point(9, 123);
             this.lblVencimiento.Name = "lblVencimiento";
             this.lblVencimiento.Size = new System.Drawing.Size(91, 16);
             this.lblVencimiento.TabIndex = 8;
@@ -115,7 +117,7 @@
             // 
             this.txtCantidad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCantidad.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCantidad.Location = new System.Drawing.Point(102, 69);
+            this.txtCantidad.Location = new System.Drawing.Point(102, 56);
             this.txtCantidad.MaxLength = 10;
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(443, 22);
@@ -126,7 +128,7 @@
             // 
             this.dtpVencimiento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpVencimiento.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpVencimiento.Location = new System.Drawing.Point(102, 101);
+            this.dtpVencimiento.Location = new System.Drawing.Point(102, 118);
             this.dtpVencimiento.Name = "dtpVencimiento";
             this.dtpVencimiento.Size = new System.Drawing.Size(443, 22);
             this.dtpVencimiento.TabIndex = 11;
@@ -137,7 +139,7 @@
             this.lblProveedor.AutoSize = true;
             this.lblProveedor.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProveedor.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lblProveedor.Location = new System.Drawing.Point(22, 204);
+            this.lblProveedor.Location = new System.Drawing.Point(22, 221);
             this.lblProveedor.Name = "lblProveedor";
             this.lblProveedor.Size = new System.Drawing.Size(78, 16);
             this.lblProveedor.TabIndex = 1;
@@ -158,13 +160,15 @@
             // 
             this.txtProveedor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtProveedor.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProveedor.Location = new System.Drawing.Point(102, 201);
+            this.txtProveedor.Location = new System.Drawing.Point(102, 218);
             this.txtProveedor.Name = "txtProveedor";
             this.txtProveedor.Size = new System.Drawing.Size(443, 22);
             this.txtProveedor.TabIndex = 16;
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lblFechaIngreso);
+            this.groupBox1.Controls.Add(this.dtpIngreso);
             this.groupBox1.Controls.Add(this.txtProveedor);
             this.groupBox1.Controls.Add(this.txtPresentacion);
             this.groupBox1.Controls.Add(this.lblProveedor);
@@ -191,7 +195,7 @@
             // 
             this.txtPresentacion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPresentacion.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPresentacion.Location = new System.Drawing.Point(102, 167);
+            this.txtPresentacion.Location = new System.Drawing.Point(102, 184);
             this.txtPresentacion.Name = "txtPresentacion";
             this.txtPresentacion.Size = new System.Drawing.Size(443, 22);
             this.txtPresentacion.TabIndex = 15;
@@ -202,7 +206,7 @@
             this.lblPresentacion.AutoSize = true;
             this.lblPresentacion.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPresentacion.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lblPresentacion.Location = new System.Drawing.Point(5, 170);
+            this.lblPresentacion.Location = new System.Drawing.Point(5, 187);
             this.lblPresentacion.Name = "lblPresentacion";
             this.lblPresentacion.Size = new System.Drawing.Size(95, 16);
             this.lblPresentacion.TabIndex = 14;
@@ -213,7 +217,7 @@
             // 
             this.txtCaja.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCaja.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCaja.Location = new System.Drawing.Point(102, 134);
+            this.txtCaja.Location = new System.Drawing.Point(102, 151);
             this.txtCaja.Name = "txtCaja";
             this.txtCaja.Size = new System.Drawing.Size(443, 22);
             this.txtCaja.TabIndex = 13;
@@ -224,12 +228,34 @@
             this.lblCaja.AutoSize = true;
             this.lblCaja.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCaja.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lblCaja.Location = new System.Drawing.Point(42, 137);
+            this.lblCaja.Location = new System.Drawing.Point(42, 154);
             this.lblCaja.Name = "lblCaja";
             this.lblCaja.Size = new System.Drawing.Size(58, 16);
             this.lblCaja.TabIndex = 12;
             this.lblCaja.Text = "ID Caja:";
             this.lblCaja.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // lblFechaIngreso
+            // 
+            this.lblFechaIngreso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblFechaIngreso.AutoSize = true;
+            this.lblFechaIngreso.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaIngreso.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.lblFechaIngreso.Location = new System.Drawing.Point(37, 92);
+            this.lblFechaIngreso.Name = "lblFechaIngreso";
+            this.lblFechaIngreso.Size = new System.Drawing.Size(59, 16);
+            this.lblFechaIngreso.TabIndex = 17;
+            this.lblFechaIngreso.Text = "Ingreso:";
+            this.lblFechaIngreso.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // dtpIngreso
+            // 
+            this.dtpIngreso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtpIngreso.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpIngreso.Location = new System.Drawing.Point(102, 87);
+            this.dtpIngreso.Name = "dtpIngreso";
+            this.dtpIngreso.Size = new System.Drawing.Size(443, 22);
+            this.dtpIngreso.TabIndex = 18;
             // 
             // Registrar_ENTRADA
             // 
@@ -269,5 +295,7 @@
         private System.Windows.Forms.TextBox txtPresentacion;
         private System.Windows.Forms.Label lblPresentacion;
         private System.Windows.Forms.TextBox txtProveedor;
+        private System.Windows.Forms.Label lblFechaIngreso;
+        private System.Windows.Forms.DateTimePicker dtpIngreso;
     }
 }
