@@ -236,7 +236,7 @@ namespace CRUD
             {
                 connection.Open();
 
-                string query = "SELECT FechaVencimiento FROM VistaProductoLoteEntradas"; // Query para obtener las fechas de vencimiento de todos los lotes
+                string query = "SELECT FechaVencimiento FROM VistaProductoLoteEntradas WHERE Cantidad > 0"; // Query para obtener las fechas de vencimiento de todos los lotes
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {

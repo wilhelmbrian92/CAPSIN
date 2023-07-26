@@ -40,7 +40,7 @@
             // calendarioVencimientos
             // 
             this.calendarioVencimientos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.calendarioVencimientos.CalendarDimensions = new System.Drawing.Size(2, 3);
+            this.calendarioVencimientos.CalendarDimensions = new System.Drawing.Size(3, 3);
             this.calendarioVencimientos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.calendarioVencimientos.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.calendarioVencimientos.Location = new System.Drawing.Point(0, 0);

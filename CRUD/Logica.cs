@@ -41,7 +41,7 @@ namespace CRUD
 
         public bool InsertarLote(string presentacion, string NCaja,int idProducto, int cantidad, DateTime fechaVencimiento, out int idLote)
         {
-            return conexionDb.InsertarLote(presentacion,NCaja,idProducto, cantidad, fechaVencimiento,fechaIngreso, out idLote);
+            return conexionDb.InsertarLote(presentacion,NCaja,idProducto, cantidad, fechaVencimiento, out idLote);
         }
 
         public bool InsertarEntrada(int cantidad,int loteID, DateTime fechaEntrada, string proveedor)
