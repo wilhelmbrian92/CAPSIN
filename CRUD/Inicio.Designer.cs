@@ -37,8 +37,11 @@
             this.btnAlta = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.panelFrm = new System.Windows.Forms.Panel();
+            this.picLogo = new System.Windows.Forms.PictureBox();
             this.panelSideMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogoBrown)).BeginInit();
+            this.panelLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSideMenu
@@ -162,12 +165,14 @@
             // panelLogo
             // 
             this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(40)))));
+            this.panelLogo.Controls.Add(this.picLogo);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
             this.panelLogo.Size = new System.Drawing.Size(224, 100);
             this.panelLogo.TabIndex = 0;
+            this.panelLogo.Paint += new System.Windows.Forms.PaintEventHandler(this.panelLogo_Paint);
             // 
             // panelFrm
             // 
@@ -177,6 +182,15 @@
             this.panelFrm.Name = "panelFrm";
             this.panelFrm.Size = new System.Drawing.Size(560, 561);
             this.panelFrm.TabIndex = 5;
+            // 
+            // picLogo
+            // 
+            this.picLogo.Location = new System.Drawing.Point(33, 12);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(155, 75);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picLogo.TabIndex = 0;
+            this.picLogo.TabStop = false;
             // 
             // Inicio
             // 
@@ -196,6 +210,8 @@
             this.Load += new System.EventHandler(this.Presentacion_Load);
             this.panelSideMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picLogoBrown)).EndInit();
+            this.panelLogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -210,6 +226,7 @@
         private System.Windows.Forms.Panel panelFrm;
         private System.Windows.Forms.PictureBox picLogoBrown;
         private System.Windows.Forms.Button btnConsultas;
+        private System.Windows.Forms.PictureBox picLogo;
     }
 }
 
