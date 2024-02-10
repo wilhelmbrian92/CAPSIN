@@ -36,8 +36,8 @@
             this.btnEntrada = new System.Windows.Forms.Button();
             this.btnAlta = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.panelFrm = new System.Windows.Forms.Panel();
             this.picLogo = new System.Windows.Forms.PictureBox();
+            this.panelFrm = new System.Windows.Forms.Panel();
             this.panelSideMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogoBrown)).BeginInit();
             this.panelLogo.SuspendLayout();
@@ -174,15 +174,6 @@
             this.panelLogo.TabIndex = 0;
             this.panelLogo.Paint += new System.Windows.Forms.PaintEventHandler(this.panelLogo_Paint);
             // 
-            // panelFrm
-            // 
-            this.panelFrm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.panelFrm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelFrm.Location = new System.Drawing.Point(224, 0);
-            this.panelFrm.Name = "panelFrm";
-            this.panelFrm.Size = new System.Drawing.Size(560, 561);
-            this.panelFrm.TabIndex = 5;
-            // 
             // picLogo
             // 
             this.picLogo.Location = new System.Drawing.Point(33, 12);
@@ -192,9 +183,19 @@
             this.picLogo.TabIndex = 0;
             this.picLogo.TabStop = false;
             // 
+            // panelFrm
+            // 
+            this.panelFrm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.panelFrm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelFrm.Location = new System.Drawing.Point(224, 0);
+            this.panelFrm.Name = "panelFrm";
+            this.panelFrm.Size = new System.Drawing.Size(560, 561);
+            this.panelFrm.TabIndex = 5;
+            this.panelFrm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelFrm_Paint);
+            // 
             // Inicio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(18F, 36F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(784, 561);

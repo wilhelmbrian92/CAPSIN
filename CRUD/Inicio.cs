@@ -17,7 +17,7 @@ namespace CRUD
         {
             InitializeComponent();
             picLogoBrown.ImageLocation = "https://licencias.transito.brown.gob.ar/assets/images/brown-logo.png";
-            picLogo.ImageLocation = "http://webserver92.somee.com/pngwing.com.png";
+            picLogo.ImageLocation = "http://www.webserver92.somee.com/klipartz.com.png";
         }
 
 
@@ -68,6 +68,11 @@ namespace CRUD
         }
 
         private void panelLogo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelFrm_Paint(object sender, PaintEventArgs e)
         {
 
         }
