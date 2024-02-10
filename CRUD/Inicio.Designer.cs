@@ -176,9 +176,9 @@
             // 
             // picLogo
             // 
-            this.picLogo.Location = new System.Drawing.Point(33, 12);
+            this.picLogo.Location = new System.Drawing.Point(49, 12);
             this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(155, 75);
+            this.picLogo.Size = new System.Drawing.Size(119, 75);
             this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picLogo.TabIndex = 0;
             this.picLogo.TabStop = false;
